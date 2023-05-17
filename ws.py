@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import os
 
-url_asamblea='https://www.bancentral.gov.do/a/d/3785-compras-menores#2023'
+url_compras='https://www.bancentral.gov.do/a/d/3785-compras-menores#2023'
 
 def status_code_url(url):
     r=requests.get(url)
@@ -52,7 +52,7 @@ def completar_url(url):
 
 
 if __name__=='__main__':
-    s=status_code_url(url_asamblea)
+    s=status_code_url(url_compras)
     anios=links_anios(s)
     meses =[]
     for x in anios:
